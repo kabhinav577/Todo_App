@@ -2,11 +2,13 @@ const TodoLists = require("../models/todo_list");
 
 module.exports.home = (req, res) => {
   // return res.render('home', {title: "ToDo App"});
-  TodoLists.find()
+  // console.log(req);
+  TodoLists.find({})
     .then((todo) => {
-      return res.render("home", {
+        // console.log(todo);
+      return res.render('homePage', {
         title: "ToDo App",
-        todolist: todo,
+        todoList: todo,
       });
     })
     .catch((err) => {
@@ -71,7 +73,7 @@ function Datevalue(dueDate) {
 
 module.exports.createTodo = (req, res) => {
   dueDate = req.body.dateValue.split("-"); // splitting date and taking months value
-
+  // console.log(req.body);
   let newDate = "";
   newDate = Datevalue(dueDate);
   TodoLists.create({
