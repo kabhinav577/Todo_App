@@ -25,26 +25,29 @@
         required
       />
     </div>
-    <button class="buttonDesign colorGrey" id="submitButton" type="submit">
-      <i class="fa fa-plus-square"> </i> Add Task
-    </button>
-    <button class="buttonDesign colorRed" id="deleteButton" type="submit">
-      <i class="fa fa-trash-o"></i> Delete Task
-    </button>
+    <div>
+      <button class="buttonDesign colorGrey" id="submitButton" type="submit">
+        <i class="fa fa-plus-square"> </i> Add Task
+      </button>
+      <button class="buttonDesign colorRed" id="deleteButton" type="submit">
+        <i class="fa fa-trash-o"></i> Delete Task
+      </button>
+    </div>
   </form>
 </div>
 
 <!-- for displaying TODO lists -->
 <div>
   <% for(let i of todoList) { %>
-  <% let j=0; let newIds='descids'+j; %>
+  <% let j=0; let newIds = 'descids'+j; %>
   <div class="singleTask">
     <input
       type="checkbox"
       name="delechack"
-      class="delechack"
+      class="delecheck"
       onclick="checkedOrNot()"
       uid=<%= i._id %>
+      
     >
     <div class="name_and_dueDate">
       <p id="<%= i._id %> uid = <%= i._id %> class="dispdsc"> <%= i.desc %> </p>
