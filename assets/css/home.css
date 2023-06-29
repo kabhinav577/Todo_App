@@ -6,13 +6,13 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(90deg, #efd5ff 0%, #a7aad6 100%);
+  background: linear-gradient(90deg, #efd5ff 0%, #bdbed5 100%);
 }
 /* style for single task div container */
 
 .singleTask {
   border: 1px solid white;
-  width: 50%;
+  width: 60%;
   height: 90px;
   color: #594646;
   display: flex;
@@ -213,6 +213,34 @@ input.delecheck {
   color: white;
 }
 
+ /* footer CSS  */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 3rem auto;
+}
+
+.footer .app-name {
+  color: grey;
+}
+
+.footer .creater {
+  color: #594646;
+}
+
+.footer .creater a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer .creater a:hover{
+  color: #e53333;
+}
+
+ /* Media query  */
 @media screen and (max-width: 900px) {
   .editClass {
     left: 68%;
