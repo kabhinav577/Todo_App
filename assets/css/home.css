@@ -1,12 +1,20 @@
 /* css design  */
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Poppins:wght@500;700&display=swap");
 /* style for body */
 :root {
   --hover-color: #e7f4f3;
 }
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Belanosima', sans-serif;
   background: linear-gradient(90deg, #efd5ff 0%, #bdbed5 100%);
+}
+/* heading  */
+h1 {
+  background: -webkit-linear-gradient(#5870a5, #56379a);
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* style for single task div container */
 
@@ -14,10 +22,13 @@ body {
   border: 1px solid white;
   width: 60%;
   height: 90px;
+  font-size: 1.1em;
   color: #594646;
   display: flex;
+  font-family: 'Poppins', sans-serif;
   align-items: center;
   /* justify-content: space-evenly; */
+  border-radius: 6px;
   margin: 10px auto;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -36,10 +47,11 @@ body {
 /* style for TODO heading */
 
 .todoheading {
-  color: white;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  margin: 20px auto;
 }
 
 /* style for form */
@@ -116,8 +128,8 @@ form {
   border: none;
   outline: none;
   margin: 2vh 10px;
-  /* transition: transform 0.3s; */
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .buttonDesign:nth-child(1):hover {
@@ -248,6 +260,9 @@ input.delecheck {
 }
 
 @media screen and (max-width: 768px) {
+  .todoheading {
+    width: 70%;
+  }
   form {
     width: 90%;
   }
