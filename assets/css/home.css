@@ -276,4 +276,8 @@ input.delecheck {
   .editClass{
     left: 80%;
   }
+
+  .footer {
+    width: 90%;
+  }
 }
